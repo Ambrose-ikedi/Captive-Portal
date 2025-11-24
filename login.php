@@ -21,3 +21,4 @@ if ($valid) {
     echo "Invalid Credential.";
     echo '<br><a href="index.html">Please try again</a>';
 }
+?>
