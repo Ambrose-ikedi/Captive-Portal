@@ -1,18 +1,14 @@
 <?php
+$username = $_POST['username'];
+$password = $_POST['password'];
 
-if (!isset($_POST['email'])) {
-    header("Location: ../index.html");
-    exit();
+if ($username == "" || $password == "") {
+    echo "Missing credentials";
+    exit;
 }
 
-$fullname = $_POST['fullname'];
-$email = $_POST['email'];
+// Database check placeholder
+// $query = "SELECT * FROM users WHERE email='$username' AND password='$password'";
 
-// You can save to a database if you want
-file_put_contents("logins.txt", "$fullname - $email\n", FILE_APPEND);
-
-// Redirect after login
-header("Location: ../success.html");
-exit();
-
+echo "success"; // return to router for authentication
 ?>

@@ -4,23 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WiFi Access Portal</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="container">
-    <img src="assets/images/logo.png" class="logo">
-    <h2>Welcome to XYZ WiFi</h2>
-    <p>Please log in to continue.</p>
 
-    <form action="backend/login.php" method="POST">
-        <input type="text" name="fullname" placeholder="Your Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <button type="submit">Connect</button>
-    </form>
+    <div class="branding">
+        <img src="assets/logo.png" class="logo">
+        <h2>Welcome to Campus WiFi</h2>
+        <p>Secure Internet Access</p>
+    </div>
 
-    <p class="small">By connecting, you agree to the network terms of use.</p>
+    <div class="login-box">
+
+        <h3>Sign in to Continue</h3>
+
+        <label>Email / Phone</label>
+        <input type="text" id="username" placeholder="Enter your email or phone number">
+
+        <label>Password / Access Code</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <button onclick="login()">Connect</button>
+
+        <p id="message"></p>
+
+        <div class="extra-links">
+            <a href="#" onclick="showHelp()">Need Help?</a>
+            <a href="#" onclick="showTerms()">Terms & Conditions</a>
+        </div>
+
+    </div>
+
 </div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
